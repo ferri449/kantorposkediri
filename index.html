@@ -12,15 +12,34 @@
     }
 
     header {
-      background-color: #f57c00;
+      position: relative;
+      background-image: url('gambar.png'); /* Ganti dengan nama file gambar header kamu */
+      background-size: cover;
+      background-position: center;
       color: white;
-      padding: 10px 20px;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Overlay gelap */
+      z-index: 1;
     }
 
     .header-content {
+      position: relative;
+      z-index: 2;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      width: 100%;
+      padding: 0 20px;
     }
 
     .logo {
@@ -28,8 +47,8 @@
     }
 
     .header-title {
-      text-align: center;
       flex: 1;
+      text-align: center;
     }
 
     nav {
@@ -74,6 +93,11 @@
       .header-content {
         flex-direction: column;
       }
+
+      header {
+        height: auto;
+        padding: 20px 0;
+      }
     }
   </style>
 </head>
@@ -81,12 +105,12 @@
 
   <header>
     <div class="header-content">
-      <img src="logo-pos.png" alt="Logo Pos Indonesia" class="logo" />
+      
       <div class="header-title">
-        <h1>KANTOR POS KEDIRI</h1>
-        <p>Layanan Hubungan Masyarakat Kediri</p>
+        <h1 style="font-size: 48px;">KANTOR POS KEDIRI</h1>
+        <p style="font-weight: bold;">Layanan Hubungan Masyarakat Kediri</p>
       </div>
-      <img src="logo-pos.png" alt="Logo Pos Indonesia" class="logo" />
+      
     </div>
   </header>
 
@@ -103,17 +127,16 @@
     <p>Kantor Pos pertama di Hindia Belanda didirikan pada 26 Agustus 1746 di Batavia oleh G.W. Baron van Imhoff. Di Kediri, layanan pos mulai berkembang sejak tahun 1830, seiring peran daerah ini sebagai pusat industri di Jawa Timur. Kantor pos digunakan terutama untuk mendukung perdagangan dan komunikasi antara pelaku usaha di Kediri dan daerah lain. Terdapat perbedaan pendapat mengenai tahun pasti berdirinya Kantor Pos Kediri, namun diperkirakan berkembang antara tahun 1830 hingga 1845.</p>
   </section>
 
- <div style="text-align: center;">
-  <img src="images.jpeg" 
-       alt="Kantor Pos Kediri tempo dulu" 
-       width="500">
-  <p><em>Sumber gambar: (Leiden University Libraries 1930)</em></p>
-</div>
-
+  <div style="text-align: center;">
+    <img src="images.jpeg" alt="Kantor Pos Kediri tempo dulu" width="500">
+    <p><em>Sumber gambar: (Leiden University Libraries 1930)</em></p>
+  </div>
 
   <footer>
-    <p>&copy;  Kantor Pos Kediri 2025 </p>
+    <p>&copy; Kantor Pos Kediri 2025 </p>
   </footer>
 
 </body>
 </html>
+
+
